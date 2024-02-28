@@ -1,0 +1,226 @@
+import React, { Component } from "react";
+import NewsItem from "../components/newsItem.js";
+export class newsComponent extends Component {
+  articles= [
+    {
+        "source": {
+            "id": "al-jazeera-english",
+            "name": "Al Jazeera English"
+        },
+        "author": "Zecharias Zelalem",
+        "title": "Missing in action: How Eritrean football was deflated at home and abroad",
+        "description": "A series of defections abroad to escape Eritrea’s mandatory military conscription, has impacted the football sector.",
+        "url": "http://www.aljazeera.com/features/2023/11/28/missing-in-action-how-eritrean-football-was-deflated-at-home-and-abroad",
+        "urlToImage": "https://www.aljazeera.com/wp-content/uploads/2023/11/afp.com-20151016-PH-PAR-Par8303242-highres-1701085854.jpg?resize=1920%2C1440",
+        "publishedAt": "2023-11-28T10:07:09Z",
+        "content": "On November 15, African qualifiers for the 2026 FIFA World Cup began to determine which nine countries go on to the global showpiece. Every national team on the continent has since seen action, excep… [+9246 chars]"
+    },
+    {
+        "source": {
+            "id": "news24",
+            "name": "News24"
+        },
+        "author": "Njabulo Ngidi",
+        "title": "'I asked them are you firing me for winning?': Pitso Mosimane opens up about his short UAE stint",
+        "description": "Pitso Mosimane doesn't regret saying goodbye to South African football in 2020, despite three turbulent, but very successful, years spent coaching in Egypt, Saudi Arabia and the United Arab Emirates.",
+        "url": "https://www.news24.com/sport/soccer/psl/i-asked-them-are-you-firing-me-for-winning-pitso-mosimane-opens-up-about-his-short-uae-stint-20231128",
+        "urlToImage": "https://cdn.24.co.za/files/Cms/General/d/9348/420681da9d004c779fecb7226f2d4779.jpg",
+        "publishedAt": "2023-11-28T09:15:51",
+        "content": "Pitso Mosimane doesn't regret saying goodbye to South African football in 2020, despite three turbulent, but very successful, years spent coaching in Egypt, Saudi Arabia and the United Arab Emirates … [+5 chars]"
+    },
+    {
+        "source": {
+            "id": "talksport",
+            "name": "TalkSport"
+        },
+        "author": "161385360554578",
+        "title": "Newcastle fans attacked, Champions League build-up, O'Neil fumes at VAR again",
+        "description": "talkSPORT.com brings you all the latest news, views and gossip from the world of football. Today’s headlines: Newcastle fans attacked by masked PSG ultras ahead of Champions League clash…",
+        "url": "https://talksport.com/football/1655761/football-news-live-champions-league-man-city-newcastle/",
+        "urlToImage": "https://talksport.com/wp-content/uploads/sites/5/2023/11/SD-TALKSPORT-HOWE-ONEILL-GUARDIOLA.jpg?strip=all&quality=100&w=1500&h=1000&crop=1",
+        "publishedAt": "2023-11-28T09:06:11Z",
+        "content": "Roy Keane was not impressed with Erik ten Hag's praise for Bruno Fernandes after Manchester United's 3-0 win at Everton.\r\nMarcus Rashford scorer their second after being given penalty duties by capta… [+1096 chars]"
+    },
+    {
+        "source": {
+            "id": "four-four-two",
+            "name": "FourFourTwo"
+        },
+        "author": "Ben Hayward",
+        "title": "Best wingers in football history",
+        "description": "Tricky and pacy players creating from the flanks have always excited fans. Here, a look at the greatest ever...",
+        "url": "https://www.fourfourtwo.com/news/best-wingers-in-football-history",
+        "urlToImage": "https://cdn.mos.cms.futurecdn.net/se8PvmAbWkekFGcdsUXpii-1200-80.jpg",
+        "publishedAt": "2023-11-28T08:30:26Z",
+        "content": "Everyone loves a winger and few things get football fans on their feet like a bit of pace or trickery out wide.\r\nThe evolution in formations and tactics throughout the years has seen wingers playing … [+15874 chars]"
+    },
+    {
+        "source": {
+            "id": "bbc-sport",
+            "name": "BBC Sport"
+        },
+        "author": null,
+        "title": "England keeper Earps wins BBC world football award",
+        "description": "England and Manchester United goalkeeper Mary Earps is voted BBC Women's Footballer of the Year 2023.",
+        "url": "http://www.bbc.co.uk/sport/football/67500679",
+        "urlToImage": "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/15715/production/_131792878_gettyimages-1695864229.jpg",
+        "publishedAt": "2023-11-28T07:07:23.5283442Z",
+        "content": "Mary Earps named BBC Women's Footballer of the Year 2023\r\nEngland and Manchester United goalkeeper Mary Earps has been voted BBC Women's Footballer of the Year.\r\nShe also helped United finish second … [+4325 chars]"
+    },
+    {
+        "source": {
+            "id": "bleacher-report",
+            "name": "Bleacher Report"
+        },
+        "author": "Brent Sobleski",
+        "title": "The Bears Are Better off Building Around QB Justin Fields",
+        "description": "Justin Fields is the present and future of Chicago Bears football. The Carolina Panthers' decision to fire head coach Frank Reich less than one year into his…",
+        "url": "https://bleacherreport.com/articles/10098923-the-bears-are-better-off-building-around-qb-justin-fields",
+        "urlToImage": "https://media.bleacherreport.com/image/upload/x_43,y_54,w_1546,h_1030,c_crop/c_fill,g_faces,w_3800,h_2000,q_95/v1701142415/ll5yybgjoamqtzh1wj5f.jpg",
+        "publishedAt": "2023-11-28T05:32:00Z",
+        "content": "Nick Wosika/Icon Sportswire via Getty Images\r\nJustin Fields is the present and future of Chicago Bears football.\r\nThe Carolina Panthers' decision to fire head coach Frank Reich less than one year int… [+7305 chars]"
+    },
+    {
+        "source": {
+            "id": "bbc-sport",
+            "name": "BBC Sport"
+        },
+        "author": null,
+        "title": "From bidding for Bale to selling the team bus - the fall of the CSL",
+        "description": "Once it was China, not Saudi Arabia, on a multi-million pound recruitment drive to buy in the world's best football talent. In just a few years though, the Chinese Super League's big-money plans have imploded.",
+        "url": "http://www.bbc.co.uk/sport/football/67509606",
+        "urlToImage": "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/0886/production/_131828120_csl_decline.jpg",
+        "publishedAt": "2023-11-28T01:52:17.5906074Z",
+        "content": "Hulk, who had enjoyed prolific spells with Zenit St Petersburg and Porto, was a marquee signing for Shanghai SIPG\r\nSign up for notifications to the latest Insight features via the BBC Sport app and f… [+9768 chars]"
+    },
+    {
+        "source": {
+            "id": "espn",
+            "name": "ESPN"
+        },
+        "author": "Dave Wilson",
+        "title": "Mike Elko aims to fulfill Texas A&M's potential as top program - ESPN",
+        "description": "Mike Elko says his goal as Texas A&M's new football coach is to fulfill the program's potential of being among the best in the country. \"We are going to be about it,\" he said.",
+        "url": "https://www.espn.com/college-football/story/_/id/38993986/mike-elko-aims-fulfill-texas-potential-top-program",
+        "urlToImage": "https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F1127%2Fr1258630_1296x729_16%2D9.jpg",
+        "publishedAt": "2023-11-28T00:23:00Z",
+        "content": "COLLEGE STATION, Texas -- Mike Elko was introduced as Texas A&amp;M's new head coach on Monday, telling a group of fans gathered inside Kyle Field that he is ready for the big expectations facing him… [+6468 chars]"
+    },
+    {
+        "source": {
+            "id": "usa-today",
+            "name": "USA Today"
+        },
+        "author": "Tyler Dragon, Victoria Hernandez, Jim Reineking",
+        "title": "Monday Night Football live updates: Bears vs. Vikings might not hit over/under",
+        "description": "Week 12 in the NFL wraps up with a good old-fashioned NFC North showdown, as the Minnesota Vikings play host to the Chicago Bears.",
+        "url": "https://www.usatoday.com/story/sports/nfl/2023/11/27/bears-vikings-monday-night-football-score-live-updates/71722501007/",
+        "urlToImage": "https://www.usatoday.com/gcdn/authoring/authoring-images/2023/11/28/USAT/71725049007-usatsi-21984559.jpg?crop=2178,1226,x3,y230&width=2178&height=1226&format=pjpg&auto=webp",
+        "publishedAt": "2023-11-27T23:36:57+00:00",
+        "content": "Week 12 in the NFL is wrapping up with an old-fashioned NFC North showdown, as the Minnesota Vikings play host to the Chicago Bears.\r\nAfter having their five-game winning streak snapped by the Denver… [+15814 chars]"
+    },
+    {
+        "source": {
+            "id": "bleacher-report",
+            "name": "Bleacher Report"
+        },
+        "author": "David Kenyon",
+        "title": "B/R's College Football Weekly Awards: Week 13",
+        "description": "College football, I know you're not a person. But thank you for saving the best of the 2023 regular season for last. Sure, the stakes of the weekend aided…",
+        "url": "https://bleacherreport.com/articles/10098706-brs-college-football-weekly-awards-week-13",
+        "urlToImage": "https://media.bleacherreport.com/image/upload/c_fill,g_faces,w_3800,h_2000,q_95/v1701018478/txl9shtfrc8z3qnrzmje.jpg",
+        "publishedAt": "2023-11-27T12:00:00Z",
+        "content": "Bowl Bid of the Week: Old Dominion Stuns Georgia State\r\nOld Dominion opened the year with a 4-3 record, but a challenging schedule made a bowl appearance look unlikely. Sure enough, the Monarchs soon… [+1097 chars]"
+    },
+    {
+        "source": {
+            "id": "bleacher-report",
+            "name": "Bleacher Report"
+        },
+        "author": "Brad Shepard",
+        "title": "College Football Rankings: B/R's Top 25 After Week 13",
+        "description": "Rivalry weekend turned into Survival Saturday for several contenders at the top of the college football food chain. Unfortunately for the Louisville…",
+        "url": "https://bleacherreport.com/articles/10098591-college-football-rankings-brs-top-25-after-week-13",
+        "urlToImage": "https://media.bleacherreport.com/image/upload/c_fill,g_faces,w_3800,h_2000,q_95/v1700959249/iwg91ijgvr3bdypyxytf.jpg",
+        "publishedAt": "2023-11-26T04:33:50Z",
+        "content": "Steven Branscombe/Getty Images\r\nThe Iowa Hawkeyes have been brilliant at overcoming their own offensive ineptitude this year, to the point where it's historic.\r\nDuring coach Kirk Ferentz's team's epi… [+2006 chars]"
+    },
+    {
+        "source": {
+            "id": "espn",
+            "name": "ESPN"
+        },
+        "author": "Heather Dinich",
+        "title": "Projecting the College Football Playoff committee's top 8 - ESPN",
+        "description": "What are Ohio State's playoff chances following the loss? How high does Michigan move? We forecast the committee's next round of rankings.",
+        "url": "https://www.espn.com/college-football/insider/story/_/id/38978495/projecting-college-football-playoff-committee-top-8",
+        "urlToImage": "https://a2.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F1125%2Fr1257899_1296x729_16%2D9.jpg",
+        "publishedAt": "2023-11-26T04:05:00Z",
+        "content": "Last year, Ohio State's wins against Penn State and Notre Dame were enough to push the Buckeyes into the College Football Playoff without beating Michigan or winning the Big Ten East.\r\nEven with the … [+8656 chars]"
+    },
+    {
+        "source": {
+            "id": "four-four-two",
+            "name": "FourFourTwo"
+        },
+        "author": "Ryan Dabbs, Matthew Ketchell, Mark White",
+        "title": "Black Friday Football Deals 2023 live: The best soccer deals as we find them",
+        "description": "Strap in for a steady stream of Black Friday football deals as we trawl the internet for the best savings the game has to offer in 2023",
+        "url": "https://www.fourfourtwo.com/news/live/black-friday-football-deals-2023-live-the-best-deals-as-we-find-them",
+        "urlToImage": "https://cdn.mos.cms.futurecdn.net/xVuZWDqaPVi2WcEjnQf6KZ-1200-80.jpg",
+        "publishedAt": "2023-11-22T09:23:00.45Z",
+        "content": "Welcome to Black Friday 2023 - let the deals commence! From football shirts and boots (or cleats depending on where you're based) to shirts, shin pads, and video games, we are covering as much digita… [+1741 chars]"
+    },
+    {
+        "source": {
+            "id": "fox-sports",
+            "name": "Fox Sports"
+        },
+        "author": "Bryan Fischer",
+        "title": "2023-24 College Football Bowl Projections: Predicting matchups for all 41 games",
+        "description": "The bowl matchups are beginning to take form as we enter championship week. Find out where your team is projected to land.",
+        "url": "http://www.foxsports.com/stories/college-football/2023-college-football-bowl-projections",
+        "urlToImage": "https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2023/10/1408/814/10.23.23_CFB_Bowl_Projections_16x9.jpg?ve=1&tl=1",
+        "publishedAt": "2023-10-25T17:32:29Z",
+        "content": "College football's regular season is over, but the sport itself remains as busy as ever.\r\nThere are a slew of coaching vacancies to sort out, the transfer portal opening just around the corner, natio… [+3065 chars]"
+    },
+    {
+        "source": {
+            "id": "espn-cric-info",
+            "name": "ESPN Cric Info"
+        },
+        "author": null,
+        "title": "Five famous people (and one cat) you didn't know have ESPNcricinfo profiles | ESPNcricinfo.com",
+        "description": "Why do a footballer, a Nobel laureate and a prime minister (no, not Imran Khan) find themselves in the ESPNcricinfo player database? | ESPNcricinfo.com",
+        "url": "http://www.espncricinfo.com/story/_/id/29102695/five-famous-people-one-cat-know-espncricinfo-profiles",
+        "urlToImage": "https://a.espncdn.com/i/cricket/cricinfo/1221668_1296x1296.gif",
+        "publishedAt": "2020-04-27T07:20:43Z",
+        "content": "Why do a cat, a footballer, a Nobel laureate and a prime minister find themselves in the ESPNcricinfo database? Here are six player profiles you wouldn't have expected we had.\r\nPeter the catThe only … [+5504 chars]"
+    }
+]
+  constructor(){
+    super();
+    console.log("this is a constructor from news component");
+    this.state= {
+      articles: this.articles,
+      loading: false
+    }
+
+  }
+  render() {
+    return (
+      <>
+        <div className="container">
+          <div className="row my-5">
+          {this.state.articles.map((element)=>{return<div className="col-md-3">
+              <NewsItem title={element.title} description={element.description} imgUrl={element.urlToImage}  newsUrl={element.url}/>
+            </div>})}
+          </div>
+          
+        </div>
+      </>
+    );
+  }
+}
+
+export default newsComponent;
